@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const PORT = 5000;
 
 app.post('/api/contact', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email,phone, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -33,7 +33,7 @@ app.post('/api/contact', async (req, res) => {
     from: 'satyamallik2112@gmail.com',
     to: 'satyamallik2112@gmail.com',
     subject: `New message from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+    text: `Name: ${name}\nEmail: ${email}\nPhone no: ${phone}\nMessage: \n${message}`,
   };
 
   try {
