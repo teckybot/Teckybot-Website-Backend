@@ -17,7 +17,7 @@ export const sendUserEmail = async (to, name) => {
     from: process.env.EMAIL_USER,
     to,
     subject: 'Thanks for contacting us!',
-    text: `Hi ${name},\n\nThanks for reaching out! We will get back to you in 24–48 hours.\n\nRegards,\nYour Team.`,
+    text: `Hi ${name},\n\nThanks for reaching out! We will get back to you in 24–48 hours.\n\nBest Regards,\nYour Team Teckybot.`,
   });
 };
 
